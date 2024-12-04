@@ -1,0 +1,11 @@
+{
+  "name": "register",
+  "private": true,
+  "scripts": {
+    "sort": "sort-json subdomains.json",
+    "validate": "node scripts/validate-subdomains.js"
+  },
+  "devDependencies": {
+    "sort-json": "^2.0.1"
+  }
+}
