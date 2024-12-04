@@ -1,0 +1,23 @@
+name: Validate Subdomains
+
+on:
+  pull_request:
+    paths:
+      - 'subdomains.json'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Use Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'
+    
+    - name: Install dependencies
+      run: npm install
+    
+    - name: Validate Subdomains
+      run: npm run validate
